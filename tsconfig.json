@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"lib": ["es5", "es6"],
+		"target": "ES5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./build",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"typeRoots": ["./node_modules/@types", "./src/express"]
+	},
+	"include": ["src/**/*"]
+}
