@@ -8,7 +8,7 @@ interface Irequest {
 	description: string;
 }
 
-/* COLOCAR O PRIVATE DENTRO DO CONTRUTOR É FAZER ISSO:
+/* COLOCAR O PRIVATE DENTRO DO CONSTRUTOR É FAZER ISSO:
 class CreateCategoryService {
     constructor(private categoriesRepository: CategoriesRepository) {
         // Atribuição implícita feita pelo TypeScript

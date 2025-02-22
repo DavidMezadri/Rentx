@@ -1,4 +1,5 @@
 import { inject, injectable } from "tsyringe";
+
 import type { IUsersRepository } from "../../repositories/IUsersRepository";
 import { deleteFile } from "../../../../utils/file";
 

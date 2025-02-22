@@ -2,7 +2,6 @@ import fs from "node:fs";
 import { parse as csvParse } from "csv-parse";
 import { inject, injectable } from "tsyringe";
 import type { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
 
 interface IImportCategory {
 	name: string;

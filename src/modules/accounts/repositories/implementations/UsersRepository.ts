@@ -1,9 +1,9 @@
 import type { Repository } from "typeorm";
 
+import type { IUsersRepository } from "../IUsersRepository";
+import { User } from "../../entities/User";
 import { AppDataSource } from "../../../../database/data-source";
 import type { ICreateUsersDTO } from "../../dtos/ICreateUsersDTO";
-import { User } from "../../entities/User";
-import type { IUsersRepository } from "../IUsersRepository";
 import { AppError } from "../../../../errors/AppError";
 
 class UsersRepository implements IUsersRepository {

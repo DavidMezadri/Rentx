@@ -11,6 +11,15 @@
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"typeRoots": ["./node_modules/@types", "./src/express"]
+		//"paths": {
+		//	"@modules/*": ["modules/*"],
+		//	"@config/*": ["config/*"],
+		//	"@shared/*": ["shared/*"],
+		//	"@errors/*": ["errors/*"],
+		//	"@utils/*": ["utils/*"],
+		//	"@database/*": ["database/*"]
+		//},
+		//"baseUrl": "./src"
 	},
 	"include": ["src/**/*"]
 }
