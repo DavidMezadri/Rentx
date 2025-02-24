@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"dev": "ts-node-dev --inspect --transpile-only --ignore node_modules --watch src src/server.ts",
+		"dev": "ts-node-dev --inspect --transpile-only --ignore node_modules --watch src src/shared/infra/http/server.ts",
 		"typeorm": "typeorm-ts-node-commonjs"
 	},
 	"keywords": [],

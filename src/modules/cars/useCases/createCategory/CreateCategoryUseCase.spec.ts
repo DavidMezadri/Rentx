@@ -1,7 +1,7 @@
 import "reflect-metadata";
 
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "../../../../shared/errors/AppError";
 import { CategoryRepositoryInMemory } from "../../repositories/in-memory/CategoriesRepositoryInMemory";
 
 let categoryRepositoryInMemory: CategoryRepositoryInMemory;

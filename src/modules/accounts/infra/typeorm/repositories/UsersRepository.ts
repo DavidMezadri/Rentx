@@ -1,10 +1,10 @@
 import type { Repository } from "typeorm";
 
-import type { IUsersRepository } from "../IUsersRepository";
-import { User } from "../../entities/User";
-import { AppDataSource } from "../../../../database/data-source";
-import type { ICreateUsersDTO } from "../../dtos/ICreateUsersDTO";
-import { AppError } from "../../../../errors/AppError";
+import type { IUsersRepository } from "../../../repositories/IUsersRepository";
+import { AppDataSource } from "../../../../../shared/infra/typeorm/data-source";
+import { AppError } from "../../../../../shared/errors/AppError";
+import type { ICreateUsersDTO } from "../../../dtos/ICreateUsersDTO";
+import { User } from "../entities/User";
 
 class UsersRepository implements IUsersRepository {
 	private repository: Repository<User>;
