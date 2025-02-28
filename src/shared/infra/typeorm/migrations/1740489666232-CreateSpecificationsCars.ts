@@ -1,0 +1,73 @@
+import {
+	type MigrationInterface,
+	type QueryRunner,
+	Table,
+	TableForeignKey,
+} from "typeorm";
+
+export class CreateSpecificationsCars1740489666232
+	implements MigrationInterface
+{
+	public async up(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.createTable(
+			new Table({
+				name: "specificationsCars",
+				columns: [
+					{
+						name: "carId",
+						type: "uuid",
+						isNullable: true,
+					},
+					{
+						name: "specificationId",
+						type: "uuid",
+						isNullable: true,
+					},
+					{
+						name: "createAt",
+						type: "timestamp",
+						default: "now()",
+					},
+				],
+			}),
+		);
+
+		await queryRunner.createForeignKey(
+			"specificationsCars",
+			new TableForeignKey({
+				name: "FKSpecificationCar",
+				referencedTableName: "specifications",
+				referencedColumnNames: ["id"],
+				columnNames: ["specificationId"],
+				onDelete: "SET NULL",
+				onUpdate: "SET NULL",
+			}),
+		);
+
+		await queryRunner.createForeignKey(
+			"specificationsCars",
+			new TableForeignKey({
+				name: "FKCarSpecification",
+				referencedTableName: "cars",
+				referencedColumnNames: ["id"],
+				columnNames: ["carId"],
+				onDelete: "SET NULL",
+				onUpdate: "SET NULL",
+			}),
+		);
+	}
+
+	public async down(queryRunner: QueryRunner): Promise<void> {
+		await queryRunner.dropForeignKey(
+			"specificationsCars",
+			"FKCarSpecification",
+		);
+
+		await queryRunner.dropForeignKey(
+			"specificationsCars",
+			"FKSpecificationCar",
+		);
+
+		await queryRunner.dropTable("specificationsCars");
+	}
+}

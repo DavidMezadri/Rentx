@@ -5,7 +5,8 @@
 	"scripts": {
 		"test": "jest",
 		"dev": "ts-node-dev --inspect --transpile-only --ignore node_modules --watch src src/shared/infra/http/server.ts",
-		"typeorm": "typeorm-ts-node-commonjs"
+		"typeorm": "typeorm-ts-node-commonjs",
+		"seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
 	},
 	"keywords": [],
 	"author": "",

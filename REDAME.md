@@ -20,7 +20,7 @@ Deve ser possivel listar todos os carros disponiveis pelo nome do carro.
 **RN**
 O usuário nao precisa estar logado no sistema.
 
-# Cadastro de ERspecificação no carro
+# Cadastro de Especificação no carro
 
 **RF**
 Deve ser possivel cadastrar uma especificação para um carro.

@@ -61,8 +61,6 @@ describe("Create Car", () => {
 			licensePlate: "abc-1234",
 		});
 
-		console.log(car);
-
 		expect(car.available).toBe(true);
 	});
 });

@@ -38,6 +38,7 @@ class UsersRepository implements IUsersRepository {
 		if (!user) {
 			throw new AppError("");
 		}
+
 		return user;
 	}
 
