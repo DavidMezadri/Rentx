@@ -13,6 +13,7 @@ export const AppDataSource = new DataSource({
 	entities: [
 		"./src/modules/cars/infra/typeorm/entities/*.ts",
 		"./src/modules/accounts/infra/typeorm/entities/*.ts",
+		"./src/modules/rentals/infra/typeorm/entities/*.ts",
 	],
 	migrations: ["./src/shared/infra/typeorm/migrations/*.ts"],
 	subscribers: [],
